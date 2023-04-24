@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="&#1040;&#1085;&#1085;&#1072;"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-21 04:32:08 "/>
+        <attribute name="created" value="0JDQvdC90LA7QU5OQTsyMDIzLTA0LTIwOyIwNzozMDowMiAiOzU3NDg="/>
+        <attribute name="edited" value="0JDQvdC90LA7QU5OQTsyMDIzLTA0LTIxOyIwNDozMjowOCAiOzI7NTg2Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <input variable="count"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="index" expression="0"/>
+            <declare name="array1" type="String" array="True" size="count"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; count">
+                <input variable="array1[i]"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="i" expression="0"/>
+            <declare name="array2" type="String" array="True" size="count"/>
+            <while expression="i &lt; count">
+                <if expression="Len(array1[i]) &lt; 4">
+                    <then>
+                        <assign variable="array2[index]" expression="array1[i]"/>
+                        <output expression="&quot; &quot;&amp; array2[index]" newline="True"/>
+                        <assign variable="index" expression="index + 1"/>
+                        <assign variable="i" expression="i + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="i + 1"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
